@@ -45,12 +45,12 @@ class Application
   end
   
   def handle_add(item)
-    #binding.pry
+    binding.pry
     if @@items.include?(item)
       binding.pry
       @@cart << item
     else
-      resp.write "We don't have that item"
+      return "We don't have that item"
     end
   end
 end
