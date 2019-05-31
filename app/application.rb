@@ -50,7 +50,7 @@ class Application
       binding.pry
       @@cart << item
     else
-      return "We don't have that item"
+      resp.write "We don't have that item"
     end
   end
 end
