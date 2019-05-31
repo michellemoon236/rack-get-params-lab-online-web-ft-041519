@@ -20,7 +20,7 @@ class Application
       #binding.pry
       resp.write handle_add(item)
     elsif req.path.match(/cart/)
-    binding.pry 
+    #binding.pry 
       if @@cart.empty?
         "Your cart is empty"
       else
