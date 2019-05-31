@@ -17,8 +17,16 @@ class Application
       resp.write handle_search(search_term)
     elsif req.path.match(/add/)
       item = req.params["q"]
-      binding.pry
+      #binding.pry
+      
+      if @@items.include?(item)
+        @@cart << item
+        resp.write @@cart
+      else
+        resp.write "We don't have that item"
+     end
       resp.write handle_add(item)
+      
     elsif req.path.match(/cart/)
     #binding.pry 
       #binding.pry
