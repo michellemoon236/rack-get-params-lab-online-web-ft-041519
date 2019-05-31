@@ -22,7 +22,7 @@ class Application
     elsif req.path.match(/cart/)
     #binding.pry 
       if @@cart.empty?
-        "Your cart is empty"
+        puts "Your cart is empty"
       else
         @@cart.each do |item|
           resp.write "#{item}\n"
