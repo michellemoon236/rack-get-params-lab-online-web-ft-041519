@@ -21,8 +21,9 @@ class Application
       resp.write handle_add(item)
     elsif req.path.match(/cart/)
     #binding.pry 
+      binding.pry
       if @@cart.empty?
-        puts "Your cart is empty"
+        "Your cart is empty"
       else
         @@cart.each do |item|
           resp.write "#{item}\n"
