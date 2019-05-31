@@ -45,9 +45,8 @@ class Application
   end
   
   def handle_add(item)
-    binding.pry
+
     if @@items.include?(item)
-      binding.pry
       @@cart << item
     else
       return "We don't have that item"
